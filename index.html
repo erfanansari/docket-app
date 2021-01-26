@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>To do lies</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- fontawesome-->
+    <script src="js/all.js"></script>
+</head>
+<body>
+<main role="main" class="mt-3">
+    <!--========== Modal ==========--->
+    <div class="container bg-light">
+        <div class="modal-customize">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary modal-trigger d-none" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-margin">
+                    <div class="modal-content">
+
+                        <div class="modal-body d-flex align-items-center flex-column mt-4">
+                            <h3 class="text-center">What's your name my friend?</h3>
+                            <form>
+                                <div class="">
+                                    <label for="recipient-name" class="col-form-label"></label>
+                                    <input type="text" class="form-control shadow-none modal-input" id="recipient-name">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button id="continue" type="button" class="btn d-block btn-light shadow-none"
+                                    data-bs-dismiss="modal" aria-label="Close">Continue
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--========== main site ==========--->
+    <div class="container bg-light">
+        <div>
+            <div class="row">
+                <div class="col-3 col-md-2 col-lg-1 mt-2 border-right d-flex flex-column align-items-center">
+                    <p class="lead">Docket</p>
+                    <button id="add-note"><i class="far fa-plus" aria-hidden="true"></i></button>
+
+                </div>
+                <div class="col-7 col-md-8 col-lg-10 mt-2 ms-2">
+                    <div>
+                        <div class="">
+                            <form>
+                                <div class="my-0">
+                                    <label for="search-note" class="col-form-label"></label>
+                                    <input type="text" class=" border-0 form-control shadow-none"
+                                           placeholder="Search..." id="search-note">
+                                </div>
+                            </form>
+                            <h1 class="mt-3">Notes</h1>
+                        </div>
+
+                        <!--========== main notes ==========--->
+
+                        <div class="main-notes">
+                            <div class="row text-center justify-content-center">
+<!--                                <div class="card col-md-6 mx-2 my-2" style=" max-width: 23%">-->
+<!--                                    <div class="card-body">-->
+
+<!--                                        <h5 class="card-title my-0">Card title</h5>-->
+<!--                                        <label for=""></label>-->
+<!--                                        <textarea class="" name="" id="" cols="30"-->
+<!--                                                  rows="8"></textarea>-->
+<!--                                        <div class="d-flex justify-content-between align-items-center mb-4 mt-2">-->
+<!--                                            <p class="m-0 date-p">May 25,2020</p>-->
+<!--                                            <button class="btn shadow-none m-0 p-0 btn-edit"><i-->
+<!--                                                    class="fas fa-pen"></i></button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="card col-md-6 mx-2 my-2" style=" max-width: 23%">-->
+<!--                                    <div class="card-body">-->
+
+<!--                                        <h5 class="card-title my-0">Card title</h5>-->
+<!--                                        <label for=""></label>-->
+<!--                                        <textarea class="" name="" id="" cols="30"-->
+<!--                                                  rows="8"></textarea>-->
+<!--                                        <div class="d-flex justify-content-between align-items-center mb-4 mt-2">-->
+<!--                                            <p class="m-0 date-p">May 25,2020</p>-->
+<!--                                            <button class="btn shadow-none m-0 p-0 btn-edit"><i-->
+<!--                                                    class="fas fa-pen"></i></button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="card col-md-6 mx-2 my-2" style=" max-width: 23%">-->
+<!--                                    <div class="card-body">-->
+
+<!--                                        <h5 class="card-title my-0">Card title</h5>-->
+<!--                                        <label for=""></label>-->
+<!--                                        <textarea class="" name="" id="" cols="30"-->
+<!--                                                  rows="8"></textarea>-->
+<!--                                        <div class="d-flex justify-content-between align-items-center mb-4 mt-2">-->
+<!--                                            <p class="m-0 date-p">May 25,2020</p>-->
+<!--                                            <button class="btn shadow-none m-0 p-0 btn-edit"><i-->
+<!--                                                    class="fas fa-pen"></i></button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="card col-md-6 mx-2 my-2" style=" max-width: 23%">-->
+<!--                                    <div class="card-body">-->
+
+<!--                                        <h5 class="card-title my-0">Card title</h5>-->
+<!--                                        <label for=""></label>-->
+<!--                                        <textarea class="" name="" id="" cols="30"-->
+<!--                                                  rows="8"></textarea>-->
+<!--                                        <div class="d-flex justify-content-between align-items-center mb-4 mt-2">-->
+<!--                                            <p class="m-0 date-p">May 25,2020</p>-->
+<!--                                            <button class="btn shadow-none m-0 p-0 btn-edit"><i-->
+<!--                                                    class="fas fa-pen"></i></button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--                            <div class=" main-notes">-->
+                    <!--                                <div class="row">-->
+                    <!--                                    <div class="card col-md-6 mx-2 my-2" style=" max-width: 23%">-->
+                    <!--                                        <div class="card-body">-->
+
+                    <!--                                            <h5 class="card-title">Card title</h5>-->
+                    <!--                                            <label for=""></label>-->
+                    <!--                                            <textarea class="position-relative" name="" id="" cols="30"-->
+                    <!--                                                      rows="10"></textarea>-->
+                    <!--                                            <div class="d-flex justify-content-between align-items-center mt-2">-->
+                    <!--                                                <p class="m-0 date-p">May 25,2020</p>-->
+                    <!--                                                <button class="btn shadow-none m-0 p-0 btn-edit"><i-->
+                    <!--                                                        class="fas fa-pen"></i></button>-->
+                    <!--                                            </div>-->
+                    <!--                                        </div>-->
+                    <!--                                    </div>-->
+                    <!--                                    <div class="card col-md-6 mx-2 my-2" style=" max-width: 23%">-->
+                    <!--                                        <div class="card-body">-->
+
+                    <!--                                            <h5 class="card-title">Card title</h5>-->
+                    <!--                                            <label for=""></label>-->
+                    <!--                                            <textarea class="position-relative" name="" id="" cols="30"-->
+                    <!--                                                      rows="10"></textarea>-->
+                    <!--                                            <div class="d-flex justify-content-between align-items-center mt-2">-->
+                    <!--                                                <p class="m-0 date-p">May 25,2020</p>-->
+                    <!--                                                <button class="btn shadow-none m-0 p-0 btn-edit"><i-->
+                    <!--                                                        class="fas fa-pen"></i></button>-->
+                    <!--                                            </div>-->
+                    <!--                                        </div>-->
+                    <!--                                    </div>-->
+                    <!--                                    <div class="card col-md-6 mx-2 my-2" style=" max-width: 23%">-->
+                    <!--                                        <div class="card-body">-->
+
+                    <!--                                            <h5 class="card-title">Card title</h5>-->
+                    <!--                                            <label for=""></label>-->
+                    <!--                                            <textarea class="position-relative" name="" id="" cols="30"-->
+                    <!--                                                      rows="10"></textarea>-->
+                    <!--                                            <div class="d-flex justify-content-between align-items-center mt-2">-->
+                    <!--                                                <p class="m-0 date-p">May 25,2020</p>-->
+                    <!--                                                <button class="btn shadow-none m-0 p-0 btn-edit"><i-->
+                    <!--                                                        class="fas fa-pen"></i></button>-->
+                    <!--                                            </div>-->
+                    <!--                                        </div>-->
+                    <!--                                    </div>-->
+                    <!--                                    <div class="card col-md-6 mx-2 my-2" style=" max-width: 23%">-->
+                    <!--                                        <div class="card-body">-->
+
+                    <!--                                            <h5 class="card-title">Card title</h5>-->
+                    <!--                                            <label for=""></label>-->
+                    <!--                                            <textarea class="position-relative" name="" id="" cols="30"-->
+                    <!--                                                      rows="10"></textarea>-->
+                    <!--                                            <div class="d-flex justify-content-between align-items-center mt-2">-->
+                    <!--                                                <p class="m-0 date-p">May 25,2020</p>-->
+                    <!--                                                <button class="btn shadow-none m-0 p-0 btn-edit"><i-->
+                    <!--                                                        class="fas fa-pen"></i></button>-->
+                    <!--                                            </div>-->
+                    <!--                                        </div>-->
+                    <!--                                    </div>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+
+
+                    <!--                            <div class="card mx-2 my-2" style="width: 18rem;">-->
+                    <!--                                <img class="card-img-top" src="..." alt="Card image cap">-->
+                    <!--                                <div class="card-body">-->
+                    <!--                                    <h5 class="card-title">Card title</h5>-->
+                    <!--                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                    <!--                                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="card mx-2 my-2" style="width: 18rem;">-->
+                    <!--                                <img class="card-img-top" src="..." alt="Card image cap">-->
+                    <!--                                <div class="card-body">-->
+                    <!--                                    <h5 class="card-title">Card title</h5>-->
+                    <!--                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                    <!--                                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="card mx-2 my-2" style="width: 18rem;">-->
+                    <!--                                <img class="card-img-top" src="..." alt="Card image cap">-->
+                    <!--                                <div class="card-body">-->
+                    <!--                                    <h5 class="card-title">Card title</h5>-->
+                    <!--                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                    <!--                                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="card mx-2 my-2" style="width: 18rem;">-->
+                    <!--                                <img class="card-img-top" src="..." alt="Card image cap">-->
+                    <!--                                <div class="card-body">-->
+                    <!--                                    <h5 class="card-title">Card title</h5>-->
+                    <!--                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                    <!--                                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</main>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
