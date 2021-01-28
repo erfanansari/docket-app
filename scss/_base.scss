@@ -1,11 +1,13 @@
-body{
+body {
   font-family: Apercu;
   transition: all ease 0.3s;
   background-color: #E6EAF6;
 }
-button,input{
+
+button, input {
   outline: none !important;
 }
+
 .box-shadow {
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
 }
@@ -16,4 +18,18 @@ button,input{
 
 .box-shadow3 {
   box-shadow: 0 5px 30px rgba(51, 105, 158, 0.09);
+}
+
+.note {
+  animation: appear 0.5s;
+}
+
+@keyframes appear {
+  from {
+    transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+    transition: 0.6s ease transform;
+  }
 }

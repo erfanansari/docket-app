@@ -1,48 +1,49 @@
-#welcome{
+#welcome {
   margin-top: 2.3rem;
 }
 
-
-.modal-customize{
-  .modal-margin{
+.modal-customize {
+  .modal-margin {
     margin-top: 200px;
   }
-  .modal-header,.modal-footer{
+
+  .modal-header, .modal-footer {
     border: 0 !important;
   }
 
-  div{
-      input.modal-input{
-        height: 3rem;
-        font-size: 27px !important;
-        transition: all ease 0.3s;
-        text-align: center;
-        border: none;
-        border-radius: 0;
-        border-bottom: solid 2px lightgray;
-        width:25.7rem;
-        padding: 0;
+  div {
+    input.modal-input {
+      height: 3rem;
+      font-size: 27px !important;
+      transition: all ease 0.3s;
+      text-align: center;
+      border: none;
+      border-radius: 0;
+      border-bottom: solid 2px lightgray;
+      width: 25.7rem;
+      padding: 0;
 
-        &:focus{
-          border-color: #989888;
-        }
+      &:focus {
+        border-color: #989888;
       }
+    }
+  }
+}
 
-    }
-    }
-#continue{
+#continue {
   border: 0;
   background-color: #e7e7e7;
   font-size: 18px;
   border-radius: 5px;
   width: 26rem;
   height: 3rem;
-  }
+}
 
-.border-right{
-  border-right:1px solid #e7e7e7 !important;
+.border-right {
+  border-right: 1px solid #e7e7e7 !important;
   min-height: 95vh;
-  button{
+
+  button {
     margin-top: 2.5rem;
     font-size: 26px;
     background-color: #000;
@@ -53,10 +54,11 @@
     width: 2.5rem;
   }
 }
-.container{
+
+.container {
   border-radius: 7px;
-  //max-height: 95vh !important;
 }
+
 .card {
   border: 0;
   border-radius: 7px;
@@ -64,31 +66,40 @@
   padding: 0 10px;
   min-width: 250px;
 }
-.main-notes .card{
+
+.main-notes .card {
   min-height: 100%;
 }
-#search-note{
+
+#search-note {
   width: 35% !important;
 }
 
-.date-p{
+.date-p {
   font-size: 15px;
 }
-.btn-edit{
+
+.btn-note {
   background-color: #000;
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
   color: #fff;
-  &:hover{
+
+  &:hover {
     color: #fff;
   }
 }
-textarea{
+
+textarea {
   max-width: 100%;
   height: 70%;
-  //border:none;
-  //background-color: #FFC972;
   resize: none;
-  outline:none
+  transition: all ease 0.3s;
+  outline: none
+}
+
+.textarea-blur {
+  border-color: #FFC972;
+  background-color: #FFC972;
 }
