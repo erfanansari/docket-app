@@ -96,7 +96,8 @@ textarea {
   height: 70%;
   resize: none;
   transition: all ease 0.3s;
-  outline: none
+  outline: none;
+  overflow-scrolling: none;
 }
 
 .textarea-blur {

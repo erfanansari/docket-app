@@ -6,6 +6,18 @@ body {
   animation: body-appear 1s;
 }
 
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+html {
+  margin-left: calc(100vw - 100%);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
+
 button, input {
   outline: none !important;
 }
@@ -138,6 +150,7 @@ textarea {
   resize: none;
   transition: all ease 0.3s;
   outline: none;
+  overflow-scrolling: none;
 }
 
 .textarea-blur {
