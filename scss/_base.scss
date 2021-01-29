@@ -1,7 +1,10 @@
 body {
-  font-family: Apercu;
+  font-family: 'Apercu', sans-serif;
+  font-weight: 500;
+  //font-family: 'Apercu Mono', sans-serif;
   transition: all ease 0.3s;
   background-color: #E6EAF6;
+  animation: body-appear 1s;
 }
 
 button, input {
@@ -21,8 +24,9 @@ button, input {
 }
 
 .note {
-  animation: appear 0.5s;
+  animation: appear  0.7s;
 }
+
 
 @keyframes appear {
   from {
@@ -30,6 +34,19 @@ button, input {
     transform-origin: 50% 100%;
     transform-style: preserve-3d;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
-    transition: 0.6s ease transform;
+  }
+}
+@keyframes body-appear {
+  from {
+    transform: scale(0.75) translateY(-50px) translateZ(4.5rem) ;
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-100px);
   }
 }
