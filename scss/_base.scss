@@ -1,19 +1,18 @@
 body {
   font-family: 'Apercu', sans-serif;
   font-weight: 500;
-  //font-family: 'Apercu Mono', sans-serif;
   transition: all ease 0.3s;
   background-color: #E6EAF6;
   animation: body-appear 1s;
 }
+
 body::-webkit-scrollbar {
   width: 1em;
 }
-html { margin-left: calc(100vw - 100%)}
 
-//body::-webkit-scrollbar-track {
-//  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-//}
+html {
+  margin-left: calc(100vw - 100%)
+}
 
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
@@ -36,7 +35,7 @@ button, input {
 }
 
 .note {
-  animation: appear  0.7s;
+  animation: appear 0.7s;
 }
 
 
@@ -48,9 +47,10 @@ button, input {
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
   }
 }
+
 @keyframes body-appear {
   from {
-    transform: scale(0.75) translateY(-50px) translateZ(4.5rem) ;
+    transform: scale(0.75) translateY(-50px) translateZ(4.5rem);
     transform-origin: 50% 100%;
     transform-style: preserve-3d;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);

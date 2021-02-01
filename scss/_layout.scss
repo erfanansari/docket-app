@@ -1,18 +1,27 @@
-
 @media only screen and (max-width: 520px) {
-  h3{
+  h3 {
     font-size: 21px;
 
   }
-  input{
-    width:15rem !important;
+  input {
+    width: 15rem !important;
+
   }
-  #search-note{
-    width: 65% !important;
+
+  .border-right {
+    border-right: 0 !important;
+  }
+  button {
+    margin-top: 1rem !important;
+
   }
 }
+
 @media only screen and (max-width: 991px) {
-.main-notes{
-  flex-wrap: wrap;
-}
+  .main-notes {
+    flex-wrap: wrap;
+  }
+  #search-note {
+    width: 100% !important
+  }
 }

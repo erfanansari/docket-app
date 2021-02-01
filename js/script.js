@@ -5,19 +5,10 @@ const mainNoteDivChild = document.querySelector('.main-notes').childNodes[1];
 const welcomeDiv = document.querySelector('.welcome-div')
 const continueBtn = document.querySelector('#continue');
 const addNoteBtn = document.querySelector('#add-note');
-// welcome input
-// document.addEventListener('readystatechange', () => document.querySelector('.modal-trigger').click())
 
-// insert welcome in DOM
-continueBtn.addEventListener('click', function () {
-    const enteredName = modalInput.value;
-    const html = `<h5>Welcome ${enteredName}</h5>`;
-    welcomeDiv.insertAdjacentHTML('afterbegin', html);
-})
-
-// insert Notes in DOM
+/*==========  insert Notes in DOM  ==========*/
 addNoteBtn.addEventListener('click', function () {
-    const html = `   <div class="card col-md-6 mx-2 my-2 note"
+    const html = `<div class="card col-md-6 mx-2 my-2 note note ${mainNoteDivChild.children.length}"
                                      style="transition: all ease 0.3s; max-width: 23%">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-center">
@@ -50,10 +41,13 @@ addNoteBtn.addEventListener('click', function () {
 
     const textArea = document.querySelector('textarea');
     textArea.focus()
-    const editCheckBtn = document.querySelector('.btn-note')
+    const editSaveBtn = document.querySelector('.btn-note')
 
-    // save and edit handler
-    editCheckBtn.addEventListener('click', function () {
+
+    /*==========  save and edit handler  ==========*/
+
+
+    editSaveBtn.addEventListener('click', function () {
         const thisTextArea = this.parentElement.previousElementSibling;
         thisTextArea.classList.toggle('textarea-blur');
         this.children[0].classList.toggle('d-none')
@@ -62,7 +56,6 @@ addNoteBtn.addEventListener('click', function () {
             textArea.focus();
         thisTextArea.toggleAttribute('readonly')
     })
-
 
     const deleteNoteBtn = document.querySelector('.delete-note');
     deleteNoteBtn.addEventListener('click', function () {
@@ -73,12 +66,6 @@ addNoteBtn.addEventListener('click', function () {
         }, 300)
     })
 
-    // check characters in title and submit by enter
-    const noteTitle = document.querySelector('.note-title');
-    noteTitle.addEventListener('keydown',function (e){
-        if(e.key==='Enter'){e.preventDefault()
-            textArea.focus();
-        }
-    })
 })
+
 

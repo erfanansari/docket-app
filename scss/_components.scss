@@ -66,9 +66,10 @@
   padding: 0 10px;
   min-width: 250px;
 }
+
 .main-notes .card {
   min-height: 100%;
-  animation: move  0.5s;
+  animation: move 0.5s;
 }
 
 #search-note {
@@ -97,7 +98,6 @@ textarea {
   resize: none;
   transition: all ease 0.3s;
   outline: none;
-  overflow-scrolling: none;
 }
 
 .textarea-blur {
@@ -105,32 +105,36 @@ textarea {
   background-color: #FFC972;
 }
 
-.delete-note{
+.delete-note {
   position: absolute;
-  top:10px;
+  top: 10px;
   left: 12px;
 
 }
-.change-color{
+
+.change-color {
   position: absolute;
   transition: all ease 0.3s;
   cursor: pointer !important;
   top: 10px;
   right: 12px;
-  &:hover{
+
+  &:hover {
     transform: rotate(-90deg);
   }
 
 }
-.change-color-ul{
+
+.change-color-ul {
   right: 12px;
   top: 35px;
 }
 
-input.note-title{
-  background-color: #FFC972;
+input.note-title {
+  background-color: transparent !important;
+  min-width: 100%;
   font-size: 22px;
   margin-bottom: -10px;
-  border:none;
+  border: none;
   font-weight: 500;
 }

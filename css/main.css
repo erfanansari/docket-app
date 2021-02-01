@@ -150,7 +150,6 @@ textarea {
   resize: none;
   transition: all ease 0.3s;
   outline: none;
-  overflow-scrolling: none;
 }
 
 .textarea-blur {
@@ -181,7 +180,8 @@ textarea {
 }
 
 input.note-title {
-  background-color: #FFC972;
+  background-color: transparent !important;
+  min-width: 100%;
   font-size: 22px;
   margin-bottom: -10px;
   border: none;
@@ -197,13 +197,21 @@ input.note-title {
     width: 15rem !important;
   }
 
-  #search-note {
-    width: 65% !important;
+  .border-right {
+    border-right: 0 !important;
+  }
+
+  button {
+    margin-top: 1rem !important;
   }
 }
 @media only screen and (max-width: 991px) {
   .main-notes {
     flex-wrap: wrap;
+  }
+
+  #search-note {
+    width: 100% !important;
   }
 }
 
