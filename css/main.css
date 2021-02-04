@@ -59,6 +59,10 @@ button, input {
     transform: translateX(-100px);
   }
 }
+.transition {
+  transition: all ease 0.3s;
+}
+
 #welcome {
   margin-top: 2.3rem;
 }
@@ -66,7 +70,8 @@ button, input {
 .modal-customize .modal-margin {
   margin-top: 200px;
 }
-.modal-customize .modal-header, .modal-customize .modal-footer {
+.modal-customize .modal-header,
+.modal-customize .modal-footer {
   border: 0 !important;
 }
 .modal-customize div input.modal-input {
@@ -115,9 +120,17 @@ button, input {
 .card {
   border: 0;
   border-radius: 7px;
-  background-color: #FFC972;
+  background-color: #ffc972;
   padding: 0 10px;
   min-width: 250px;
+  max-width: 23%;
+}
+.card .date-p {
+  font-size: 14.5px;
+}
+.card small {
+  font-size: 0.75rem;
+  color: #41464b;
 }
 
 .main-notes .card {
@@ -129,16 +142,13 @@ button, input {
   width: 35% !important;
 }
 
-.date-p {
-  font-size: 15px;
-}
-
 .btn-note {
   background-color: #000;
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
   color: #fff;
+  margin-bottom: 4px !important;
 }
 .btn-note:hover {
   color: #fff;
@@ -153,8 +163,8 @@ textarea {
 }
 
 .textarea-blur {
-  border-color: #FFC972;
-  background-color: #FFC972;
+  border-color: #ffc972;
+  background-color: #ffc972;
 }
 
 .delete-note {

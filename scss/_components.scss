@@ -7,7 +7,8 @@
     margin-top: 200px;
   }
 
-  .modal-header, .modal-footer {
+  .modal-header,
+  .modal-footer {
     border: 0 !important;
   }
 
@@ -62,9 +63,18 @@
 .card {
   border: 0;
   border-radius: 7px;
-  background-color: #FFC972;
+  background-color: #ffc972;
   padding: 0 10px;
   min-width: 250px;
+  max-width: 23%;
+  .date-p {
+    font-size: 14.5px;
+  }
+
+  small {
+    font-size: 0.75rem;
+    color: #41464b;
+  }
 }
 
 .main-notes .card {
@@ -76,17 +86,13 @@
   width: 35% !important;
 }
 
-.date-p {
-  font-size: 15px;
-}
-
 .btn-note {
   background-color: #000;
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
   color: #fff;
-
+  margin-bottom: 4px !important;
   &:hover {
     color: #fff;
   }
@@ -101,15 +107,14 @@ textarea {
 }
 
 .textarea-blur {
-  border-color: #FFC972;
-  background-color: #FFC972;
+  border-color: #ffc972;
+  background-color: #ffc972;
 }
 
 .delete-note {
   position: absolute;
   top: 10px;
   left: 12px;
-
 }
 
 .change-color {
@@ -122,7 +127,6 @@ textarea {
   &:hover {
     transform: rotate(-90deg);
   }
-
 }
 
 .change-color-ul {
