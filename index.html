@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/main.css" />
 
     <!-- fontawesome-->
-    <script src="js/all.js"></script>
 
     <!-- font-->
     <link href="http://fonts.cdnfonts.com/css/apercu" rel="stylesheet" />
@@ -28,8 +27,11 @@
               class="col-3 col-md-2 col-lg-1 mt-2 border-right d-flex flex-column align-items-center"
             >
               <p class="lead">Docket</p>
-              <button id="add-note">
-                <i class="far fa-plus" aria-hidden="true"></i>
+              <button
+                id="add-note"
+                class="d-flex align-items-center justify-content-center"
+              >
+                <img src="icons/plus.png" alt="" style="max-width: 90%" />
               </button>
             </div>
             <div class="col-7 col-md-8 col-lg-10 mt-2 ms-2">
@@ -51,9 +53,9 @@
 
                 <!--========== main notes ==========--->
 
-                <div class="main-notes">
-                  <div class="row text-center justify-content-center"></div>
-                </div>
+                <div
+                  class="row text-center justify-content-center main-notes"
+                ></div>
               </div>
             </div>
           </div>
@@ -61,10 +63,6 @@
       </div>
     </main>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!--    <script src="js/popper.min.js"></script>-->
-    <!--    <script src="js/bootstrap.min.js"></script>-->
     <script src="js/script.js"></script>
   </body>
 </html>

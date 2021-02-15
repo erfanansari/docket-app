@@ -125,7 +125,7 @@ button, input {
   min-width: 250px;
   max-width: 23%;
 }
-.card .date-p {
+.card .note-date {
   font-size: 14.5px;
 }
 .card small {
@@ -169,8 +169,8 @@ textarea {
 
 .delete-note {
   position: absolute;
-  top: 10px;
-  left: 12px;
+  top: 7px;
+  left: 3px;
 }
 
 .change-color {
