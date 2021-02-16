@@ -10,7 +10,6 @@ class App {
     this._saveNote();
     this._getLocalStorage();
   }
-
   _createNote() {
     const now = new Date();
     const options = {
@@ -141,7 +140,6 @@ ${content}</textarea
       }.bind(this)
     );
   }
-
   _deleteNote() {
     /*==========  UI  ==========*/
     this.#mainNotesDiv.addEventListener(
@@ -167,11 +165,9 @@ ${content}</textarea
       }.bind(this)
     );
   }
-
   _setLocalStorage() {
     localStorage.setItem('notes', JSON.stringify(this.#notes));
   }
-
   _getLocalStorage() {
     const notes = JSON.parse(localStorage.getItem('notes'));
 
@@ -191,5 +187,4 @@ ${content}</textarea
     document.querySelectorAll('.btn-note').forEach(btn => btn.click());
   }
 }
-
 const app = new App();
