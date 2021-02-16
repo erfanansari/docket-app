@@ -1,11 +1,9 @@
 @media only screen and (max-width: 520px) {
   h3 {
     font-size: 21px;
-
   }
   input {
     width: 15rem !important;
-
   }
 
   .border-right {
@@ -13,15 +11,14 @@
   }
   button {
     margin-top: 1rem !important;
-
   }
 }
 
 @media only screen and (max-width: 991px) {
-  .main-notes {
+  .note-container {
     flex-wrap: wrap;
   }
   #search-note {
-    width: 100% !important
+    width: 100% !important;
   }
 }

@@ -2,7 +2,7 @@
 
 class App {
   #notes = [];
-  #mainNotesDiv = document.querySelector('.main-notes');
+  #noteContainer = document.querySelector('.note-container');
   #addNoteBtn = document.querySelector('#add-note');
   constructor() {
     this.#addNoteBtn.addEventListener('click', this._createNote.bind(this));
@@ -22,7 +22,7 @@ class App {
     const time = `${hour}:${minutes}`;
     const formattedDate = new Intl.DateTimeFormat('en-US', options).format(now);
     const dataID = (Date.now() + '').slice(-5);
-    this._renderNote(dataID, 'Note', '', formattedDate, time, '');
+    this._renderNote(dataID, 'Note', '', formattedDate, time);
   }
   _renderNote(id, title, content, date, time) {
     const html = `<div
@@ -61,6 +61,7 @@ class App {
                       </div>
                       <label for="content"></label>
                       <textarea
+                        dir="auto"
                         class="note-text"
                         id="content"
                         cols="30"
@@ -93,11 +94,11 @@ ${content}</textarea
                       </div>
                     </div>
                   </div>`;
-    this.#mainNotesDiv.insertAdjacentHTML('afterbegin', html);
+    this.#noteContainer.insertAdjacentHTML('afterbegin', html);
     document.querySelector('textarea').focus();
   }
   _saveNote() {
-    this.#mainNotesDiv.addEventListener(
+    this.#noteContainer.addEventListener(
       'click',
       function (e) {
         const clickedBtn = e.target.closest('.btn-note');
@@ -119,19 +120,19 @@ ${content}</textarea
 
         /*==========  Save Data  ==========*/
         const getCardBody = e.target.closest('.card-body');
-
-        const noteID = e.target.closest('.note').dataset.id;
-        const noteTitle = getCardBody.querySelector('.note-title').value;
-        const noteText = getCardBody.querySelector('textarea').value;
-        const noteDate = getCardBody.querySelector('.note-date').textContent;
-        const noteTime = getCardBody.querySelector('.note-time').textContent;
-
-        const noteData = { noteTitle, noteText, noteDate, noteTime, noteID };
-
-        // Guaurd cluase if check icon is there do the rest
-        if (clickedBtn.children[0].classList.contains('d-none')) return;
         const noteEl = e.target.closest('.note');
-        let note = this.#notes.find(note => note.noteID === noteEl.dataset.id);
+
+        const id = noteEl.dataset.id;
+        const title = getCardBody.querySelector('.note-title').value;
+        const text = getCardBody.querySelector('textarea').value;
+        const date = getCardBody.querySelector('.note-date').textContent;
+        const time = getCardBody.querySelector('.note-time').textContent;
+
+        const noteData = { title, text, date, time, id };
+
+        // Guard clause if check icon is there do the rest
+        if (clickedBtn.children[0].classList.contains('d-none')) return;
+        const note = this.#notes.find(note => note.id === id);
         const index = this.#notes.indexOf(note);
         index > -1 && this.#notes.splice(index, 1);
         // if (index > -1) this.#notes.splice(index, 1); same as the top line
@@ -142,13 +143,11 @@ ${content}</textarea
   }
   _deleteNote() {
     /*==========  UI  ==========*/
-    this.#mainNotesDiv.addEventListener(
+    this.#noteContainer.addEventListener(
       'click',
       function (e) {
-        const btnDelete = document.querySelector('.delete-note');
         const clickedBtn = e.target.closest('.delete-note');
         if (!clickedBtn) return;
-        const thisBtn = e.currentTarget;
         const theNoteEl = clickedBtn.parentElement.parentElement.parentElement;
         theNoteEl.style.opacity = '0';
         setTimeout(function () {
@@ -157,10 +156,9 @@ ${content}</textarea
 
         /*==========  Delete Data  ==========*/
         const noteEl = e.target.closest('.note');
-        let note = this.#notes.find(note => note.noteID === noteEl.dataset.id);
+        const note = this.#notes.find(note => note.id === noteEl.dataset.id);
         const index = this.#notes.indexOf(note);
         index > -1 && this.#notes.splice(index, 1);
-
         this._setLocalStorage();
       }.bind(this)
     );
@@ -175,16 +173,10 @@ ${content}</textarea
 
     this.#notes = notes;
     this.#notes.forEach(note => {
-      this._renderNote(
-        note.noteID,
-        note.noteTitle,
-        note.noteText,
-        note.noteDate,
-        note.noteTime
-      );
+      this._renderNote(note.id, note.title, note.text, note.date, note.time);
     });
-    // click on all save btns to load them saved
+    // click on all save buttons to load them saved
     document.querySelectorAll('.btn-note').forEach(btn => btn.click());
   }
 }
-const app = new App();
+new App();

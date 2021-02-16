@@ -133,7 +133,7 @@ button, input {
   color: #41464b;
 }
 
-.main-notes .card {
+.note-container .card {
   min-height: 100%;
   animation: move 0.5s;
 }
@@ -236,7 +236,7 @@ input.note-title {
   }
 }
 @media only screen and (max-width: 991px) {
-  .main-notes {
+  .note-container {
     flex-wrap: wrap;
   }
 
