@@ -137,23 +137,6 @@ textarea {
   left: 3px;
 }
 
-.change-color {
-  position: absolute;
-  transition: all ease 0.3s;
-  cursor: pointer !important;
-  top: 10px;
-  right: 12px;
-
-  &:hover {
-    transform: rotate(-90deg);
-  }
-}
-
-.change-color-ul {
-  right: 12px;
-  top: 35px;
-}
-
 input.note-title {
   background-color: transparent !important;
   min-width: 100%;

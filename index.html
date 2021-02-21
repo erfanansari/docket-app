@@ -5,20 +5,21 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
-      name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
     />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- fontawesome-->
-
-    <!-- font-->
+    <!-- Font-->
     <link href="http://fonts.cdnfonts.com/css/apercu" rel="stylesheet" />
+
+    <!-- Style-->
+    <link href="css/main.css" rel="stylesheet" />
+    <script defer src="js/script.js"></script>
   </head>
   <body>
-    <main role="main" class="mt-3">
+    <main class="mt-3" role="main">
       <!--========== main site ==========--->
       <div class="container bg-light">
         <div>
@@ -28,10 +29,10 @@
             >
               <p class="lead">Docket</p>
               <button
-                id="add-note"
                 class="d-flex align-items-center justify-content-center"
+                id="add-note"
               >
-                <img src="icons/plus.png" alt="" style="max-width: 90%" />
+                <img alt="" src="icons/plus.png" style="max-width: 90%" />
               </button>
             </div>
             <div class="col-7 col-md-8 col-lg-10 mt-2 ms-2">
@@ -39,20 +40,18 @@
                 <div class="">
                   <form>
                     <div class="my-0">
-                      <label for="search-note" class="col-form-label"></label>
+                      <label class="col-form-label" for="search-note"></label>
                       <input
-                        type="text"
                         class="border-0 form-control shadow-none"
-                        placeholder="Search..."
                         id="search-note"
+                        placeholder="Search..."
+                        type="text"
                       />
                     </div>
                   </form>
                   <h1 class="mt-3">Notes</h1>
                 </div>
-
-                <!--========== main notes ==========--->
-
+                <!--========== note container ==========--->
                 <div
                   class="row text-center justify-content-center note-container"
                 ></div>
@@ -62,7 +61,5 @@
         </div>
       </div>
     </main>
-
-    <script src="js/script.js"></script>
   </body>
 </html>

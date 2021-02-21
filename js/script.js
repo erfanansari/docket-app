@@ -4,12 +4,14 @@ class App {
   #notes = [];
   #noteContainer = document.querySelector('.note-container');
   #addNoteBtn = document.querySelector('#add-note');
+
   constructor() {
     this.#addNoteBtn.addEventListener('click', this._createNote.bind(this));
     this._deleteNote();
     this._saveNote();
     this._getLocalStorage();
   }
+
   _createNote() {
     const now = new Date();
     const options = {
@@ -24,6 +26,7 @@ class App {
     const dataID = (Date.now() + '').slice(-5);
     this._renderNote(dataID, 'Note', '', formattedDate, time);
   }
+
   _renderNote(id, title, content, date, time) {
     const html = `<div
                     class="card col-md-6 mx-2 my-2 note transition"
@@ -33,38 +36,25 @@ class App {
                       <div class="d-flex justify-content-center">
                         <button class="btn m-0 p-0 shadow-none delete-note">
                           <img
-                            src="icons/close.png"
                             alt=""
-                            style="max-width: 45%"
                             class="m-0 p-0"
+                            src="icons/close.png"
+                            style="max-width: 45%"
                           />
                         </button>
                         <input
-                          type="text"
                           class="card-title mt-0 text-center note-title"
                           maxlength="17"
+                          type="text"
                           value="${title}"
                         />
-                        <div class="visually-hidden">
-                          <span class="change-color"
-                            ><i class="fa fa-chevron-left"></i
-                          ></span>
-                          <ul
-                            class="position-absolute list-unstyled change-color-ul"
-                          >
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                          </ul>
-                        </div>
                       </div>
                       <label for="content"></label>
                       <textarea
-                        dir="auto"
                         class="note-text"
-                        id="content"
                         cols="30"
+                        dir="auto"
+                        id="content"
                         rows="8"
                       >
 ${content}</textarea
@@ -76,13 +66,13 @@ ${content}</textarea
                           <p class="m-0 note-date">${date}</p>
                           <small class="note-time">${time}</small>
                         </div>
-                        <button
-                          class="btn shadow-none m-0 p-0 btn-note d-flex justify-content-center align-items-center"
+                        <button class="btn shadow-none m-0 p-0 btn-note d-flex justify-content-center align-items-center"
+                          
                         >
                           <img
-                            src="icons/pen.png"
-                            class="d-none edit-btn"
                             alt=""
+                            class="d-none edit-btn"
+                            src="icons/pen.png"
                             style="max-width: 60%"
                           />
                           <img
@@ -97,6 +87,7 @@ ${content}</textarea
     this.#noteContainer.insertAdjacentHTML('afterbegin', html);
     document.querySelector('textarea').focus();
   }
+
   _saveNote() {
     this.#noteContainer.addEventListener(
       'click',
@@ -141,6 +132,7 @@ ${content}</textarea
       }.bind(this)
     );
   }
+
   _deleteNote() {
     /*==========  UI  ==========*/
     this.#noteContainer.addEventListener(
@@ -163,9 +155,11 @@ ${content}</textarea
       }.bind(this)
     );
   }
+
   _setLocalStorage() {
     localStorage.setItem('notes', JSON.stringify(this.#notes));
   }
+
   _getLocalStorage() {
     const notes = JSON.parse(localStorage.getItem('notes'));
 
@@ -179,4 +173,5 @@ ${content}</textarea
     document.querySelectorAll('.btn-note').forEach(btn => btn.click());
   }
 }
+
 new App();
