@@ -1,45 +1,3 @@
-#welcome {
-  margin-top: 2.3rem;
-}
-
-.modal-customize {
-  .modal-margin {
-    margin-top: 200px;
-  }
-
-  .modal-header,
-  .modal-footer {
-    border: 0 !important;
-  }
-
-  div {
-    input.modal-input {
-      height: 3rem;
-      font-size: 27px !important;
-      transition: all ease 0.3s;
-      text-align: center;
-      border: none;
-      border-radius: 0;
-      border-bottom: solid 2px lightgray;
-      width: 25.7rem;
-      padding: 0;
-
-      &:focus {
-        border-color: #989888;
-      }
-    }
-  }
-}
-
-#continue {
-  border: 0;
-  background-color: #e7e7e7;
-  font-size: 18px;
-  border-radius: 5px;
-  width: 26rem;
-  height: 3rem;
-}
-
 .border-right {
   border-right: 1px solid #e7e7e7 !important;
   min-height: 95vh;
@@ -70,7 +28,6 @@
   .note-date {
     font-size: 14.5px;
   }
-
   small {
     font-size: 0.75rem;
     color: #41464b;
@@ -82,10 +39,6 @@
   animation: move 0.5s;
 }
 
-#search-note {
-  width: 35% !important;
-}
-
 .btn-note {
   background-color: #000;
   border-radius: 50%;
@@ -93,9 +46,6 @@
   height: 2rem;
   color: #fff;
   margin-bottom: 4px !important;
-  &:hover {
-    color: #fff;
-  }
 }
 
 textarea::-webkit-scrollbar {

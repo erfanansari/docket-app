@@ -22,18 +22,6 @@ button, input {
   outline: none !important;
 }
 
-.box-shadow {
-  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
-}
-
-.box-shadow2 {
-  box-shadow: 0 3px 15px rgba(70, 72, 77, 0.08);
-}
-
-.box-shadow3 {
-  box-shadow: 0 5px 30px rgba(51, 105, 158, 0.09);
-}
-
 .note {
   animation: appear 0.7s;
 }
@@ -61,41 +49,6 @@ button, input {
 }
 .transition {
   transition: all ease 0.3s;
-}
-
-#welcome {
-  margin-top: 2.3rem;
-}
-
-.modal-customize .modal-margin {
-  margin-top: 200px;
-}
-.modal-customize .modal-header,
-.modal-customize .modal-footer {
-  border: 0 !important;
-}
-.modal-customize div input.modal-input {
-  height: 3rem;
-  font-size: 27px !important;
-  transition: all ease 0.3s;
-  text-align: center;
-  border: none;
-  border-radius: 0;
-  border-bottom: solid 2px lightgray;
-  width: 25.7rem;
-  padding: 0;
-}
-.modal-customize div input.modal-input:focus {
-  border-color: #989888;
-}
-
-#continue {
-  border: 0;
-  background-color: #e7e7e7;
-  font-size: 18px;
-  border-radius: 5px;
-  width: 26rem;
-  height: 3rem;
 }
 
 .border-right {
@@ -138,10 +91,6 @@ button, input {
   animation: move 0.5s;
 }
 
-#search-note {
-  width: 35% !important;
-}
-
 .btn-note {
   background-color: #000;
   border-radius: 50%;
@@ -149,9 +98,6 @@ button, input {
   height: 2rem;
   color: #fff;
   margin-bottom: 4px !important;
-}
-.btn-note:hover {
-  color: #fff;
 }
 
 textarea::-webkit-scrollbar {
@@ -207,10 +153,6 @@ input.note-title {
     font-size: 21px;
   }
 
-  input {
-    width: 15rem !important;
-  }
-
   .border-right {
     border-right: 0 !important;
   }
@@ -222,10 +164,6 @@ input.note-title {
 @media only screen and (max-width: 991px) {
   .note-container {
     flex-wrap: wrap;
-  }
-
-  #search-note {
-    width: 100% !important;
   }
 }
 

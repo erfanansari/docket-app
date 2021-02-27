@@ -6,13 +6,13 @@ class App {
   #addNoteBtn = document.querySelector('#add-note');
 
   constructor() {
-    this.#addNoteBtn.addEventListener('click', this._createNote.bind(this));
-    this._deleteNote();
-    this._saveNote();
+    this.#addNoteBtn.addEventListener('click', this._create.bind(this));
+    this._delete();
+    this._save();
     this._getLocalStorage();
   }
 
-  _createNote() {
+  _create() {
     const now = new Date();
     const options = {
       month: 'short',
@@ -24,10 +24,10 @@ class App {
     const time = `${hour}:${minutes}`;
     const formattedDate = new Intl.DateTimeFormat('en-US', options).format(now);
     const dataID = (Date.now() + '').slice(-5);
-    this._renderNote(dataID, 'Note', '', formattedDate, time);
+    this._render(dataID, 'Note', '', formattedDate, time);
   }
 
-  _renderNote(id, title, content, date, time) {
+  _render(id, title, content, date, time) {
     const html = `<div
                     class="card col-md-6 mx-2 my-2 note transition"
                     data-id="${id}"
@@ -44,7 +44,7 @@ class App {
                         </button>
                         <input
                           class="card-title mt-0 text-center note-title"
-                          maxlength="17"
+                          maxlength="14"
                           type="text"
                           value="${title}"
                         />
@@ -88,7 +88,7 @@ ${content}</textarea
     document.querySelector('textarea').focus();
   }
 
-  _saveNote() {
+  _save() {
     this.#noteContainer.addEventListener(
       'click',
       function (e) {
@@ -133,7 +133,7 @@ ${content}</textarea
     );
   }
 
-  _deleteNote() {
+  _delete() {
     /*==========  UI  ==========*/
     this.#noteContainer.addEventListener(
       'click',
@@ -167,11 +167,10 @@ ${content}</textarea
 
     this.#notes = notes;
     this.#notes.forEach(note => {
-      this._renderNote(note.id, note.title, note.text, note.date, note.time);
+      this._render(note.id, note.title, note.text, note.date, note.time);
     });
     // click on all save buttons to load them saved
     document.querySelectorAll('.btn-note').forEach(btn => btn.click());
   }
 }
-
 new App();

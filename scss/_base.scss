@@ -22,23 +22,9 @@ button, input {
   outline: none !important;
 }
 
-.box-shadow {
-  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
-}
-
-.box-shadow2 {
-  box-shadow: 0 3px 15px rgba(70, 72, 77, 0.08);
-}
-
-.box-shadow3 {
-  box-shadow: 0 5px 30px rgba(51, 105, 158, 0.09);
-}
-
 .note {
   animation: appear 0.7s;
 }
-
-
 @keyframes appear {
   from {
     transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);

@@ -2,10 +2,6 @@
   h3 {
     font-size: 21px;
   }
-  input {
-    width: 15rem !important;
-  }
-
   .border-right {
     border-right: 0 !important;
   }
@@ -17,8 +13,5 @@
 @media only screen and (max-width: 991px) {
   .note-container {
     flex-wrap: wrap;
-  }
-  #search-note {
-    width: 100% !important;
   }
 }
