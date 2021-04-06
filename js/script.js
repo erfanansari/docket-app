@@ -121,12 +121,10 @@ ${content}</textarea
 
         const noteData = { title, text, date, time, id };
 
-        // Guard clause if check icon is there do the rest
         if (clickedBtn.children[0].classList.contains('d-none')) return;
         const note = this.#notes.find(note => note.id === id);
         const index = this.#notes.indexOf(note);
         index > -1 && this.#notes.splice(index, 1);
-        // if (index > -1) this.#notes.splice(index, 1); same as the top line
         this.#notes.push(noteData);
         this._setLocalStorage();
       }.bind(this)
