@@ -10,7 +10,7 @@ interface Note {
 }
 
 class App {
-  private notes = [];
+  private notes: Note[] = [];
   private noteContainer = document.querySelector('.note-container')!;
   private addNoteBtn = document.querySelector('#add-note')!;
   private static instance: App;
@@ -37,9 +37,7 @@ class App {
       day: 'numeric',
       year: 'numeric',
     };
-    // @ts-ignore
     const hour = String(now.getHours()).padStart(2, '0');
-    // @ts-ignore
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const time = `${hour}:${minutes}`;
     const formattedDate = new Intl.DateTimeFormat('en-US', options).format(now);
@@ -150,15 +148,12 @@ ${content}</textarea
       const date = getCardBody.querySelector('.note-date')!.textContent;
       const time = getCardBody.querySelector('.note-time')!.textContent;
 
-      const noteData = { title, text, date, time, id };
+      const noteData = { title, text, date, time, id } as Note;
 
       if (editBtn.classList.contains('d-none')) return;
-      // @ts-ignore
-      const note = this.notes.find((note: Note) => note.id === id);
-      // @ts-ignore
+      const note = this.notes.find((note: Note) => note.id === id)!;
       const index = this.notes.indexOf(note);
       if (index > -1) this.notes.splice(index, 1);
-      // @ts-ignore
       this.notes.push(noteData);
       this.setLocalStorage();
     });
@@ -177,11 +172,9 @@ ${content}</textarea
 
       /*==========  Delete Data  ==========*/
       const noteEl = (e.target as Element).closest('.note') as HTMLElement;
-      // @ts-ignore
       const note = this.notes.find(
-        (note: any) => note.id === noteEl.dataset.id
-      );
-      // @ts-ignore
+        (note: Note) => note.id === noteEl.dataset.id
+      ) as any;
       const index = this.notes.indexOf(note);
       if (index > -1) this.notes.splice(index, 1);
       this.setLocalStorage();
@@ -207,4 +200,5 @@ ${content}</textarea
       .forEach(btn => (btn as HTMLButtonElement).click());
   }
 }
+
 App.getInstance();

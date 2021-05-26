@@ -5,7 +5,7 @@ var App = /** @class */ (function () {
         this.noteContainer = document.querySelector('.note-container');
         this.addNoteBtn = document.querySelector('#add-note');
         this.addNoteBtn.addEventListener('click', this.create.bind(this));
-        this["delete"]();
+        this.delete();
         this.save();
         this.getLocalStorage();
     }
@@ -21,7 +21,7 @@ var App = /** @class */ (function () {
         var options = {
             month: 'short',
             day: 'numeric',
-            year: 'numeric'
+            year: 'numeric',
         };
         // @ts-ignore
         var hour = String(now.getHours()).padStart(2, '0');
@@ -81,7 +81,7 @@ var App = /** @class */ (function () {
             _this.setLocalStorage();
         });
     };
-    App.prototype["delete"] = function () {
+    App.prototype.delete = function () {
         var _this = this;
         /*==========  UI  ==========*/
         this.noteContainer.addEventListener('click', function (e) {
@@ -95,8 +95,8 @@ var App = /** @class */ (function () {
             }, 300);
             /*==========  Delete Data  ==========*/
             var noteEl = e.target.closest('.note');
-            // @ts-ignore
             var note = _this.notes.find(function (note) { return note.id === noteEl.dataset.id; });
+            console.log(note);
             // @ts-ignore
             var index = _this.notes.indexOf(note);
             if (index > -1)
