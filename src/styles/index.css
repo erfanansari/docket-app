@@ -1,8 +1,8 @@
 body {
-  font-family: 'Apercu', sans-serif;
+  font-family: "Apercu", sans-serif;
   font-weight: 500;
   transition: all ease 0.3s;
-  background-color: #e6eaf6;
+  background-color: #E6EAF6;
   animation: body-appear 1s;
 }
 
@@ -18,8 +18,7 @@ body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
 }
 
-button,
-input {
+button, input {
   outline: none !important;
 }
 
@@ -35,7 +34,6 @@ input {
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
   }
 }
-
 @keyframes body-appear {
   from {
     transform: scale(0.75) translateY(-50px) translateZ(4.5rem);
@@ -44,13 +42,11 @@ input {
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
   }
 }
-
 @keyframes move {
   from {
     transform: translateX(-100px);
   }
 }
-
 .transition {
   transition: all ease 0.3s;
 }
@@ -59,7 +55,6 @@ input {
   border-right: 1px solid #e7e7e7 !important;
   min-height: 95vh;
 }
-
 .border-right button {
   margin-top: 2.5rem;
   font-size: 26px;
@@ -83,11 +78,9 @@ input {
   min-width: 250px;
   max-width: 23%;
 }
-
 .card .note-date {
   font-size: 14.5px;
 }
-
 .card small {
   font-size: 0.75rem;
   color: #41464b;
@@ -169,11 +162,10 @@ input.note-title {
     margin-top: 1rem !important;
   }
 }
-
 @media only screen and (max-width: 991px) {
   .note-container {
     flex-wrap: wrap;
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=index.css.map */
