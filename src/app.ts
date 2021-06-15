@@ -41,16 +41,16 @@ class App {
     const time = `${hour}:${minutes}`;
     const formattedDate = new Intl.DateTimeFormat('en-US', options).format(now);
     const dataID = (Date.now() + '').slice(-5);
-    this.render(dataID, 'Note', '', formattedDate, time);
+    this.render({
+      id: dataID,
+      title: 'Note',
+      content: '',
+      date: formattedDate,
+      time,
+    });
   };
 
-  private render = (
-    id: string,
-    title: string,
-    content: string,
-    date: string,
-    time: string
-  ) => {
+  private render = ({ id, title, content, date, time }: Note) => {
     const template = document.getElementById('markup')! as HTMLTemplateElement;
     const markup = template.content.cloneNode(true) as HTMLElement;
     const elements = [
@@ -149,8 +149,8 @@ class App {
     if (!notes) return;
 
     this.notes = notes;
-    this.notes.forEach((note: Note) => {
-      this.render(note.id, note.title, note.content, note.date, note.time);
+    this.notes.forEach(({ id, title, content, date, time }) => {
+      this.render({ id, title, content, date, time });
     });
     // click on all save buttons to load them saved
     document
@@ -158,4 +158,5 @@ class App {
       .forEach(btn => (btn as HTMLButtonElement).click());
   }
 }
+
 App.getInstance();
